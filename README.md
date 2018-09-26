@@ -1,18 +1,18 @@
-Project 2
+# Project 2
++ By: *your first and last name*
++ Production URL: <http://p2.yourdomain.com>
 
-By: Mallory Rice
-Production URL: http://p2.mallory-rice.me
-Outside resources
+## Outside resources
+*your list of outside resources go here*
 
+## 3 Unique inputs
+*You don't have to list all inputs, just 3 unique ones. The following is an example of what I'd put if my project was the xkcd Password Generator: (1) Text input to indicate number of words in password, (2) Checkbox to indicate whether to include a number (3) Dropdown to indicate what symbol to include*
 
-3 Unique inputs
-You don't have to list all inputs, just 3 unique ones. The following is an example of what I'd put if my project was the xkcd Password Generator: (1) Text input to indicate number of words in password, (2) Checkbox to indicate whether to include a number (3) Dropdown to indicate what symbol to include
+## Class
+*List the name of the class you're using, e.g. `Form.php`, `Password.php`, etc.*
 
-Class
-List the name of the class you're using, e.g. Form.php, Password.php, etc.
+## Code style divergences
+*list any divergences from PSR-1/PSR-2 and course guidelines on code style*
 
-Code style divergences
-list any divergences from PSR-1/PSR-2 and course guidelines on code style
-
-Notes for instructor
-any notes for me to refer to while grading; if none, omit this section
+## Notes for instructor
+*any notes for me to refer to while grading; if none, omit this section*
