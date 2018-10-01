@@ -1,21 +1,37 @@
 <?php
-#Get data from form request
 
 #Load movie data
-$blockbustersJson = file_get_contents('php/blockbusters.JSON');
-$movies = json_decode($blockbustersJson, true);
-?>
-<pre>
-<?php var_dump($movies); ?>
+require('php/logic.php');
+#snagged dump function from helper.php week 3
+function dump($mixed = null)
+{
+    echo '<pre>';
+    var_dump($mixed);
+    echo '</pre>';
+}
+
+#Get data from form request
+$searchMonth = $_GET['month'];
+$searchGenre = $_GET['genre'];
+$searchGross = $_GET['gross'];
+
+dump($searchMonth);
+dump($searchGenre);
+dump($searchGross);
+
+if ($searchMonth == "may") {
+    foreach($movies as $movie => $title){
+        foreach($title as $month => $return){
+
+        echo "{$return} <br>";
+        }
+        };
+    };
+
+
+    ?>
+
+    <pre>
+<?php dump($movies['Incredibles 2']['world_gross']); ?>
 </pre>
-<?php
-
-//dump('search.php');
-
-
-//var_dump($_GET);
-//echo 'You searched for '.$_GET['searchterm'];
-
-var_dump($_GET);
-echo 'You searched for '.$_GET['month'];
 
