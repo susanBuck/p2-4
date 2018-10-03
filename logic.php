@@ -1,6 +1,10 @@
 <?php
-#dump function from week 3
+
+session_start();
+
 require 'Form.php';
+
+#dump function from week 3
 function dump($mixed = null)
 {
     echo '<pre>';
@@ -9,10 +13,28 @@ function dump($mixed = null)
 }
 
 $hasErrors = false;
-
+#Class info
 use DWA\Form;
 
 $form = new Form($_GET);
+
+#Error reporting
+    $errors = $form->validate([
+        'reservation' => 'required|alphaNumeric'
+    ]);
+
+$hasErrors = $form->hasErrors;
+
+if($form->hasErrors){
+    header('Location:index.php');
+}
+
+#Session Info
+if(isset($_SESSION['reservation'])){
+    $results = $_SESSION['reservation'];
+    $hasErrors = $results['hasErrors'];
+    }
+
 
 #Get form data
 $name = $form->get('reservation');
@@ -23,14 +45,8 @@ $sodaSize = $form->get('soda');
 
 #Error reporting
 $errors = $form->validate([
-    'reservation' => 'required|alphaNumeric'
+    'reservation' => 'required|alpha'
 ]);
-
-if ($errors) {
-    header('Location:index.php');
-} else {
-    header('Location:search.php');
-}
 
 #Ticket Statements
 if ($adultTic) {
@@ -76,3 +92,4 @@ $totalBill = ($finalFood + $finalTicket);
 #Make sure numbers: formatted correctly, found via PHP documentation
 $finalBill = number_format($totalBill, 2, '.', '');
 
+session_unset();

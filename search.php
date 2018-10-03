@@ -20,13 +20,15 @@
 <body>
 
 	<div class="reservationBox">
-	<h1>Thank you <?php echo $name ?>! 
+	<h1>Thank you <?php echo $name ?>!
+	<div class="bill">
 	<p>Your reservation is confirmed.</p> </h1>
 	Your bill is described below: <br>
 	Tickets: $<?php echo $finalTicket?><br>
 	Concessions: $<?php echo $finalFood?>
 	<br>
 	Total: $<?php echo $finalBill ?>
+	</div>
 </div>
 </body>
 </html>

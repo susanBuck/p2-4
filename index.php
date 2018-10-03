@@ -7,7 +7,6 @@
      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
 </head>
 
 <body>
@@ -17,6 +16,9 @@
 <form method='GET' action='search.php'>
 
     <p>Name for Reservation <input type='text' name='reservation'></p>
+    <?php if(!empty($errors)): ?>
+Test Test
+    <?php endif ;?>
 
     <div class="ticketBox"> <p>Select number of adult tickets</p>
     <input type='number' name='adult' step='1' min=0 max=10> $9.00 each<br>
