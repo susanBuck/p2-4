@@ -1,37 +1,32 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Mal
+ * Date: 10/1/18
+ * Time: 9:27 PM
+ */include ('logic.php');
 
-#Load movie data
-require('php/logic.php');
-#snagged dump function from helper.php week 3
-function dump($mixed = null)
-{
-    echo '<pre>';
-    var_dump($mixed);
-    echo '</pre>';
-}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Confirmation Page</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
-#Get data from form request
-$searchMonth = $_GET['month'];
-$searchGenre = $_GET['genre'];
-$searchGross = $_GET['gross'];
+</head>
 
-dump($searchMonth);
-dump($searchGenre);
-dump($searchGross);
+<body>
 
-if ($searchMonth == "may") {
-    foreach($movies as $movie => $title){
-        foreach($title as $month => $return){
-
-        echo "{$return} <br>";
-        }
-        };
-    };
-
-
-    ?>
-
-    <pre>
-<?php dump($movies['Incredibles 2']['world_gross']); ?>
-</pre>
-
+	<div class="reservationBox">
+	<h1>Thank you <?php echo $name ?>! 
+	<p>Your reservation is confirmed.</p> </h1>
+	Your bill is described below: <br>
+	Tickets: $<?php echo $finalTicket?><br>
+	Concessions: $<?php echo $finalFood?>
+	<br>
+	Total: $<?php echo $finalBill ?>
+</div>
+</body>
+</html>
