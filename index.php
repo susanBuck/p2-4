@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Hello World</title>
     <meta charset="utf-8">
-    <title>Project 2</title>
-    <link href='/css/style.css' rel='stylesheet' type='text/css'>
-    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
-    rel='stylesheet'>
+    <link href="style.css" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
-    <?php require('php/logic.php'); ?>
 
 </head>
-<body>
 
-<h1> Blockbusters of Summer 2018 </h1>
+<body>
+    <div class="displayBorder">
+<div class="title"><h1>Let's All Go to the Movies!</h1></div>
 
 <form method='GET' action='search.php'>
-    <h2>Month</h2>
-        <input type='checkbox' name='month' value='may'>May 2018<br>
-        <input type='checkbox' name='month' value='june'>June 2018<br>
-        <input type='checkbox' name='month' value='july'>July 2018<br>
-        <input type='checkbox' name='month' value='august'>August 2018<br>
 
-    <h2>Genre</h2>
-    <select name='genre'>
+    <p>Name for Reservation <input type='text' name='reservation'></p>
 
-        <option value="all" name='genre'>All Genres</option>
-        <option value="action" name='genre'>Action/Adventure</option>
-        <option value="comedy" name='genre'>Comedy</option>
-        <option value="drama" name='genre'>Drama</option>
-        <option value="romance" name='genre'>Romance</option>
-        <option value="family" name='genre'>Family</option>
-        <option value="horror" name='genre'>Horror</option>
-        <option value="scifi" name='genre'>Sci-Fi</option>
+    <div class="ticketBox"> <p>Select number of adult tickets</p>
+    <input type='number' name='adult' step='1' min=0 max=10> $9.00 each<br>
+</div>
 
-    </select>
-    <br>
-
-    <h2>Total Gross</h2>
-        <input type='radio' name='gross' value='worldwide'>Worldwide Gross<br>
-        <input type='radio' name='gross' value='us'>US Gross<br>
-
-    <br>
-    <input type='submit' name='searchChoices'>
-</form>
-
-    <?php foreach($movies as $title => $moviedata): ?>
-
-    <div class="movieInfo">
-
-        <?php echo $title?> earned <?=$moviedata['world_gross'] ?> worldwide.
-
+    <div class="ticketBox">
+    <p>Select number of children tickets</p>
+    <input type='number' name='child' step='1' max=10 min=0> $6.75 each<br>
     </div>
-
-<?php endforeach; ?>
+    <div class="concessions">
+        <h2 class = "title">Concessions</h2>
+        <h4>Popcorn</h4>
+            <input type='radio' name='popcorn' value='small'>  Small $3.75<br>
+            <input type='radio' name='popcorn' value='med'>  Medium $4.50<br>
+            <input type='radio' name='popcorn' value='lrg'>  Large $5.00<br>
+        <br>
+        <h4>Soft Drinks</h4>
+            <input type='radio' name='soda' value='small_soda'>  Small $3.00<br>
+            <input type='radio' name='soda' value='med_soda'>  Medium $4.00<br>
+            <input type='radio' name='soda' value='lrg_soda'>  Large $4.50<br>
+              </div>
+        <br>
+        <input type='submit' name='reservationDetails' value="Make Reservation" class="subButton">
+  
+</form>
+</div>
 
 </body>
 </html>
