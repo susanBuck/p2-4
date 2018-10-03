@@ -1,0 +1,43 @@
+
+.displayBorder {
+    border: black solid 2px;
+    border-radius: 25px;
+    padding: 20px;
+    width: 45%;
+}
+
+.ticketBox, .reservationBox {
+    background: #D3D3D3;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.reservationBox {
+    width: 45%;
+}
+
+.concessions {
+    background: #F0FFFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.subButton {
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 0px #aaa;
+}
