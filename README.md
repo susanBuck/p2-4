@@ -1,6 +1,7 @@
 Project 2
 By: Mallory Rice
 Production URL: http://p2.mallory-rice.me
+
 Outside resources
 *PHP documentation: https://secure.php.net/manual/en/function.number-format.php
 *(book) Learning PHP, MYSQL & Javascript: With JQuery, CSS & HTML5
