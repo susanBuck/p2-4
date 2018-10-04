@@ -12,29 +12,27 @@ function dump($mixed = null)
     echo '</pre>';
 }
 
-$hasErrors = false;
 #Class info
 use DWA\Form;
 
 $form = new Form($_GET);
 
 #Error reporting
-    $errors = $form->validate([
-        'reservation' => 'required|alphaNumeric'
-    ]);
+$errors = $form->validate([
+    'reservation' => 'required|alphaNumeric'
+]);
 
 $hasErrors = $form->hasErrors;
 
-if($form->hasErrors){
+if ($form->hasErrors) {
     header('Location:index.php');
 }
 
 #Session Info
-if(isset($_SESSION['reservation'])){
+if (isset($_SESSION['reservation'])) {
     $results = $_SESSION['reservation'];
     $hasErrors = $results['hasErrors'];
-    }
-
+}
 
 #Get form data
 $name = $form->get('reservation');

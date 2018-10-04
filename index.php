@@ -16,15 +16,14 @@
 <form method='GET' action='search.php'>
 
     <p>Name for Reservation <input type='text' name='reservation'></p>
-    <?php if(!empty($errors)): ?>
-Test Test
-    <?php endif ;?>
 
     <div class="ticketBox"> <p>Select number of adult tickets</p>
+
     <input type='number' name='adult' step='1' min=0 max=10> $9.00 each<br>
 </div>
 
-    <div class="ticketBox">
+     <div class="ticketBox">
+
     <p>Select number of children tickets</p>
     <input type='number' name='child' step='1' max=10 min=0> $6.75 each<br>
     </div>
@@ -39,9 +38,10 @@ Test Test
             <input type='radio' name='soda' value='small_soda'>  Small $3.00<br>
             <input type='radio' name='soda' value='med_soda'>  Medium $4.00<br>
             <input type='radio' name='soda' value='lrg_soda'>  Large $4.50<br>
-              </div>
-        <br>
-        <input type='submit' name='reservationDetails' value="Make Reservation" class="subButton">
+    </div>
+    <br>
+
+    <input type='submit' name='reservationDetails' value="Make Reservation" class="subButton">
   
 </form>
 </div>

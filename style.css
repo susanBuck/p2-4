@@ -16,8 +16,9 @@
 }
 
 .alert {
-color: red;
-text-weight: bold;}
+    color: red;
+    text-weight: bold;
+}
 
 .reservationBox {
     width: 45%;
